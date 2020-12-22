@@ -9,7 +9,7 @@ sudo yum install boost-devel
 sudo yum install ncurses-devel 
 make
 ./bastet 
-(через nano дописываем в конец файла строку)
+# через nano дописываем в конец файла строку
 install: 
       cp ./$(PROGNAME) /usr/bin/
 	  
