@@ -1,4 +1,5 @@
 #!/bin/bash
+
 groupdel g1
 userdel -r u1
 userdel -r u2
