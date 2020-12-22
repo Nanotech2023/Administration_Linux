@@ -51,8 +51,8 @@ yumdownloader —source nano
 rpm -iv nano-2.3.1-10.e17.src.rpm
 cd rpmbuild/SPECS
 nano nano.spec
-# добавляем строчку
-# ln -s "nano" "%{buildroot}/%{_bindir}/newnano"
+# добавляем строку
+ln -s "nano" "%{buildroot}/%{_bindir}/newnano"
 yum install groff
 rpmbuild -bb nano.spec
 yum localinstall RPMS/x86_64/nano-2.3.1-10.e17.rpm
