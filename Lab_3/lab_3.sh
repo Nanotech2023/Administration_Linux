@@ -45,16 +45,23 @@ cp ~/work3.log /home/test13/work3-2.log
 
 #14.
 usermod -a -G g1 u2
-chown u1:g1 /home/test13 -R
-chmod 640 /home/test13 -R
-chmod 550 /home/test13 
+# chown - меняем владельца
+chown -R u1 /home/test13
+#chgrp - меняем группу
+chgrp -R g1 /home/test13
+# 750 - юзер:rwe группа:r-e остальные:---
+chmod 750 /home/test13
+# 660 - юзер:rw- группа:rw- остальные:---
+chmod 660 /home/test13/*
 
 #15.
 mkdir /home/test14
+# Если применяется закрепленный sticky bit, пользователь может удалить файл, только если он является пользователем-владельцем файла или каталога, в котором содержится файл.
 chmod 1777 /home/test14
 
 #16.
 cp /bin/nano /home/test14/nano
+# Файл будет выполняться с разрешениями владельца
 chmod 6555 /home/test14/nano
 
 #17.
