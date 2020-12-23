@@ -44,8 +44,8 @@ cp ~/work3.log /home/test13/work3-1.log
 cp ~/work3.log /home/test13/work3-2.log
 
 #14.
-usermod -a -G g2 u2
-chown u1:g2 /home/test13 -R
+usermod -a -G g1 u2
+chown u1:g1 /home/test13 -R
 chmod 640 /home/test13 -R
 chmod 550 /home/test13 
 
